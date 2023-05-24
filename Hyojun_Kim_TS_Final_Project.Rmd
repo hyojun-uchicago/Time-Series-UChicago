@@ -167,7 +167,7 @@ arima_pred <- forecast(arima_fit, h = 12)
 
 ```
 
-## Model 3: Expoential Smoothing
+## Model 3: Exponential Smoothing
 
 ```{r}
 
