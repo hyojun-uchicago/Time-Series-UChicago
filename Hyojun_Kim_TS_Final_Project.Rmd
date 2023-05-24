@@ -231,7 +231,7 @@ ARIMA (RMSE = 64.97350)
 ARFIMA (RMSE = 409.29779)
 
 
-## Plots for Predictions
+## Plots of the Predictions
 
 ```{r}
 
@@ -267,7 +267,7 @@ sarima_plot <- ggplot() +
   geom_ribbon(aes(x = index(test), ymin = sarima_pred$lower[,2], ymax = sarima_pred$upper[,2]), fill = "grey80") +
   geom_line(aes(x = index(test), y = test, colour = "Actual")) +
   geom_line(aes(x = index(test), y = sarima_pred$mean, colour = "Predicted")) +
-  labs(x = "Date", y = "Price", title = "ARIMA: Actual vs Predicted") +
+  labs(x = "Date", y = "Price", title = "SARIMA: Actual vs Predicted") +
   scale_color_manual(name = "", values = c("Actual" = "blue", "Predicted" = "red")) +
   theme_minimal()
 
